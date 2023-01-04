@@ -1,0 +1,52 @@
+{
+  "name": "root",
+  "isFolder": true,
+  "extension": null,
+  "id": 1,
+  "children": [
+    {
+      "name": "profile",
+      "isFolder": true,
+      "extension": null,
+      "id": 2,
+      "children": [
+        {
+          "name": "style",
+          "type": "folder",
+          "extension": null,
+          "id": 4,
+          "children": [
+            {
+              "name": "index.css",
+              "isFolder": false,
+              "extension": ".css",
+              "id": 5,
+              "children": []
+            },
+            {
+              "name": "index.js",
+              "isFolder": false,
+              "extension": ".js",
+              "id": 3,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "style.css",
+          "isFolder": false,
+          "extension": ".css",
+          "id": 5,
+          "children": []
+        },
+        {
+          "name": "module.js",
+          "isFolder": false,
+          "extension": ".js",
+          "id": 3,
+          "children": []
+        }
+      ]
+    }
+  ]
+}
