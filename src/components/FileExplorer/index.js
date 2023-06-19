@@ -1,5 +1,5 @@
 import "./index.css";
-import { Icons } from "../Helper";
+import { Icons, sortByType } from "../Helper";
 import { useState } from "react";
 
 function FileExplorer({ data, updateTree = () => {} }) {
@@ -20,7 +20,11 @@ function FileExplorer({ data, updateTree = () => {} }) {
 
   const onAddNewItem = (e) => {
     if (e.keyCode === 13 && e.target.value) {
-      updateTree(data.id, e.target.value, showInput.isFolder);
+      updateTree({
+        folderId: data.id,
+        name: e.target.value,
+        isFolder: showInput.isFolder,
+      });
       setShowInput({ ...showInput, visible: false });
     }
   };
@@ -76,22 +80,24 @@ function FileExplorer({ data, updateTree = () => {} }) {
             </>
           )}
           {data.children &&
-            data.children.map((item) => {
-              return (
-                <FileExplorer
-                  data={item}
-                  key={item.id}
-                  updateTree={updateTree}
-                />
-              );
-            })}
+            sortByType({ list: data.children, sortOn: "isFolder" }).map(
+              (item) => {
+                return (
+                  <FileExplorer
+                    data={item}
+                    key={item.id}
+                    updateTree={updateTree}
+                  />
+                );
+              }
+            )}
         </div>
       </div>
     );
   } else {
     return (
       <div className="file-explorer">
-        <div className="explorer-item space-between file-container">
+        <div className="explorer-item space-between">
           <div className="item-details">
             {Icons["file"]}
             {data.name}

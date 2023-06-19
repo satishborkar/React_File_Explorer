@@ -7,13 +7,18 @@ function App() {
   const [explorerData, setExplorerData] = useState(data);
   const { insertNode } = useTreeDataUpdate();
 
-  const handleTreeUpdate = ({ folderId, item, isFolder }) => {
-    const updatedTree = insertNode(explorerData, folderId, item, isFolder);
+  const handleTreeUpdate = ({ folderId, name, isFolder }) => {
+    const updatedTree = insertNode({
+      tree: explorerData,
+      folderId,
+      name,
+      isFolder,
+    });
     setExplorerData(updatedTree);
   };
 
   return (
-    <div className="file-explorer">
+    <div className="file-explorer" style={{ height: "100vh" }}>
       <FileExplorer data={explorerData} updateTree={handleTreeUpdate} />
     </div>
   );

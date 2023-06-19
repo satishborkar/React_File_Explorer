@@ -15,6 +15,6 @@ code {
 .file-explorer {
     max-width: 300px;
     background-color: black;
-    height: 100vh;
+    /* height: 100vh; */
     color: #fff;
 }

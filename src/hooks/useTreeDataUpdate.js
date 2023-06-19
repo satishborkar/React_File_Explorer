@@ -1,9 +1,9 @@
 const useTreeDataUpdate = () => {
-  function insertNode(tree, folderId, item, isFolder) {
+  function insertNode({ tree, folderId, name, isFolder }) {
     if (tree.id === folderId && tree.isFolder) {
       tree.children.unshift({
         id: new Date().getTime(),
-        name: item,
+        name: name,
         isFolder: isFolder,
         children: [],
       });
@@ -13,7 +13,12 @@ const useTreeDataUpdate = () => {
 
     let latestNode = [];
     latestNode = tree.children.map((item) => {
-      return insertNode(item, folderId, item, isFolder);
+      return insertNode({
+        tree: item,
+        folderId,
+        name,
+        isFolder,
+      });
     });
 
     return { ...tree, children: latestNode };

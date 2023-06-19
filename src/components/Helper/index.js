@@ -9,3 +9,7 @@ export const Icons = {
   newFile: <AiOutlineFileAdd className="icon" />,
   newFolder: <AiFillFolderAdd className="icon" />,
 };
+
+export const sortByType = ({ list, sortOn }) => {
+  return list.sort((a, b) => b[sortOn] - a[sortOn]);
+};

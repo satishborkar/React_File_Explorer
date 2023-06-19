@@ -6,7 +6,8 @@ li {
   display: flex;
   flex-direction: column;
 }
-ul > li {
+
+ul>li {
   padding-left: 15px;
 }
 
@@ -16,6 +17,7 @@ ul > li {
   align-items: center;
   padding: 4px 0;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .space-between {
@@ -45,6 +47,7 @@ ul > li {
 .folder-explorer {
   padding-left: 5px;
 }
+
 .file-explorer {
   padding-left: 5px;
 }

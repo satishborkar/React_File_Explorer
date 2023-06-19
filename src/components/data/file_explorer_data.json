@@ -5,26 +5,26 @@
   "id": 1,
   "children": [
     {
-      "name": "profile",
+      "name": "src",
       "isFolder": true,
       "extension": null,
       "id": 2,
       "children": [
         {
-          "name": "style",
-          "type": "folder",
+          "name": "css",
+          "isFolder": true,
           "extension": null,
           "id": 4,
           "children": [
             {
-              "name": "index.css",
+              "name": "style.css",
               "isFolder": false,
               "extension": ".css",
               "id": 5,
               "children": []
             },
             {
-              "name": "index.js",
+              "name": "layout.css",
               "isFolder": false,
               "extension": ".js",
               "id": 3,
@@ -33,16 +33,16 @@
           ]
         },
         {
-          "name": "style.css",
+          "name": "index.js",
           "isFolder": false,
-          "extension": ".css",
+          "extension": ".js",
           "id": 5,
           "children": []
         },
         {
-          "name": "module.js",
+          "name": "package.json",
           "isFolder": false,
-          "extension": ".js",
+          "extension": ".json",
           "id": 3,
           "children": []
         }
